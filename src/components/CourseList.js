@@ -29,9 +29,22 @@ const CourseList = () => {
 
   const courses = [
     { name: 'Udemy課程', platform: 'Udemy', href:"https://www.udemy.com/", icon: 'udemy-icon.png', tooltip:"用我的google mail 備用帳號登入"},
+   
+    { name: 'JavaScript & TypeScript 前端工程師入門班【早鳥預購中】', platform: 'TheCodingPro', href:"https://thecodingpro.com/courses/javascript", icon: 'thecodingpro.png', tooltip:"用我的google mail 主帳號登入"},
+   
+    { name: 'Nuxt3 高效入門全攻略', platform: 'TheCodingPro', href:"https://thecodingpro.com/courses/nuxt3", icon: 'thecodingpro.png', tooltip:"用我的google mail 主帳號登入"},
+   
+
+    { name: 'Vue 單元測試  vue-test-utils｜入門', platform: 'TheCodingPro', href:"https://thecodingpro.com/courses/vue-test-utils", icon: 'thecodingpro.png', tooltip:"用我的google mail 主帳號登入"},
+   
+
+
+
     { name: '60天商管學院：教你如何賺錢、省錢、做出好決策', platform: '知識衛星', href:"https://sat.cool/classroom/60", icon: 'sat_knowledge_logo.jpeg',tooltip:"用我的google mail 主帳號登入" },
     { name: '動畫互動網頁特效入門（JS/CANVAS）', platform: 'Hahow', href:"https://hahow.in/courses/586fae97a8aae907000ce721", icon: 'hahow-icon.jpeg',tooltip:"用我的臉書主帳號登入" },    
     { name: '跟著版塊做網站：用動態特效點滿視覺創意', platform: 'Hahow', href:"https://hahow.in/courses/60939aa60390311a3a030a1e/discussions",icon: 'hahow-icon.jpeg',tooltip:"用我的臉書主帳號登入" },
+   
+   
     { name: 'Node.js、MongoDB 網站後端工程入門', platform: 'Hahow', href:"https://hahow.in/courses/60aeac37bca91777bf5bb114/discussions?item=60d37e4291602a62f8bfc224",icon: 'hahow-icon.jpeg' ,tooltip:"用我的臉書主帳號登入"}
     // 更多課程...
   ];
