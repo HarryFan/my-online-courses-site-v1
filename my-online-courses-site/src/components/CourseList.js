@@ -28,9 +28,11 @@ const CourseList = () => {
 
 
   const courses = [
-    { name: '課程 1', platform: 'Udemy', icon: 'udemy-icon.png' },
-    { name: '課程 2', platform: '知識衛星', icon: 'sat_knowledge_logo.jpeg' },
-    { name: '課程 3', platform: 'Hahow', icon: 'hahow-icon.png' }
+    { name: 'Udemy課程', platform: 'Udemy', href:"https://www.udemy.com/", icon: 'udemy-icon.png', tooltip:"用我的google mail 備用帳號登入"},
+    { name: '60天商管學院：教你如何賺錢、省錢、做出好決策', platform: '知識衛星', href:"https://sat.cool/classroom/60", icon: 'sat_knowledge_logo.jpeg',tooltip:"用我的google mail 主帳號登入" },
+    { name: '動畫互動網頁特效入門（JS/CANVAS）', platform: 'Hahow', href:"https://hahow.in/courses/586fae97a8aae907000ce721", icon: 'hahow-icon.jpeg',tooltip:"用我的臉書主帳號登入" },    
+    { name: '跟著版塊做網站：用動態特效點滿視覺創意', platform: 'Hahow', href:"https://hahow.in/courses/60939aa60390311a3a030a1e/discussions",icon: 'hahow-icon.jpeg',tooltip:"用我的臉書主帳號登入" },
+    { name: 'Node.js、MongoDB 網站後端工程入門', platform: 'Hahow', href:"https://hahow.in/courses/60aeac37bca91777bf5bb114/discussions?item=60d37e4291602a62f8bfc224",icon: 'hahow-icon.jpeg' ,tooltip:"用我的臉書主帳號登入"}
     // 更多課程...
   ];
 
