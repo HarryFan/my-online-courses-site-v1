@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Table } from 'react-bootstrap'; // 確保加入這行
+import { Table, Tooltip, OverlayTrigger } from 'react-bootstrap'; // 導入所需組件
 
 const CourseList = () => {
 
@@ -38,28 +38,35 @@ const CourseList = () => {
 
   return (
     <div>
-      <h1>我的線上課程集錦</h1>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>課程名稱</th>
-            <th>平台</th>
+    <h1>我的線上課程集錦</h1>
+    <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>課程名稱</th>
+          <th>平台</th>
+        </tr>
+      </thead>
+      <tbody>
+        {courses.map((course, index) => (
+          <tr key={index}>
+            <td>
+              <GatsbyImage image={getImageByName(course.icon)} alt={course.platform} />
+            </td>
+            <td>
+              <OverlayTrigger
+                placement="right"
+                overlay={<Tooltip id={`tooltip-${index}`}>{course.tooltip}</Tooltip>}
+              >
+                <a href={course.href} target="_blank" rel="noopener noreferrer">{course.name}</a>
+              </OverlayTrigger>
+            </td>
+            <td>{course.platform}</td>
           </tr>
-        </thead>
-       <tbody>
-          {courses.map((course, index) => (
-            <tr key={index}>
-              <td>
-                <GatsbyImage image={getImageByName(course.icon)} alt={course.platform} />
-              </td>
-              <td>{course.name}</td>
-              <td>{course.platform}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-    </div>
+        ))}
+      </tbody>
+    </Table>
+  </div>
   );
 };
 
